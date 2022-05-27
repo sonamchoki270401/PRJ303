@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet"
+    type='text/css'
+    href='{{ url_for('static',filename='css/bootstrap.min.css')}}'>
+<link rel="stylesheet"
+    type='text/css'
+    href='{{ url_for('static',filename='css/boxicons.min.css')}}'>
+<link rel="stylesheet"
+    type='text/css'
+    href='{{ url_for('static',filename='css/style.css')}}'>
+    <link rel="stylesheet"
+    type='text/css'
+    href='{{ url_for('static',filename='css/style2.css')}}'>
+    
+
+    <title>Weather Forecast</title>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    
+   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="#">Weather Forecast</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#portfolio">Portfolio</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#services">About Us</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#team">Team</a>
+             </li>
+               <li class="nav-item">
+               <a class="nav-link" href="{{url_for('predict')}}">Predict</a>
+             </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   <section id="home">
+      <div class="container text-center">
+         <div class="row justify-content-center">
+            <div class="col-md-10">
+               <h1 class="text-white display-4">Weather Forecast</h1>
+               <p class="text-white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-les</p>
+               <a href="predict.html" class="btn btn-brand">Predict</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="portfolio" class="row g-0 py-0">
+      <div class="col-lg-4 col-sm-6">
+          <div class="portfolio-item">
+              <img src="{{ url_for('static',filename='img/p1.jpg')}}" alt="">
+              <div class="portfolio-overlay">
+                  <div>
+                      <h3>SNOW</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+          <div class="portfolio-item">
+              <img src="{{ url_for('static',filename='img/p2.jpg')}}" alt="">
+              <div class="portfolio-overlay">
+                  <div>
+                      <h3>SUNNY</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+          <div class="portfolio-item">
+              <img src="{{ url_for('static',filename='img/p3.jpg')}}" alt="">
+              <div class="portfolio-overlay">
+                  <div>
+                      <h3>FOGGY</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+          <div class="portfolio-item">
+              <img src="{{ url_for('static',filename='img/p4.jpg')}}" alt="">
+              <div class="portfolio-overlay">
+                  <div>
+                      <h3>Drizzle</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+          <div class="portfolio-item">
+              <img src="{{ url_for('static',filename='img/p5.jpg')}}" alt="">
+              <div class="portfolio-overlay">
+                  <div>
+                      <h3>RAIN</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+          <div class="portfolio-item">
+              <img src="{{ url_for('static',filename='img/p6.jpg')}}" alt="">
+              <div class="portfolio-overlay">
+                  <div></div>
+              </div>
+          </div>
+      </div>
+  </section>
+      <section id="services">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 section-intro">
+               <h1>Our Services</h1>
+               <div class="hline"></div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-4 col-sm-6 p-4">
+               <div class="icon-box">
+                  <i class='bx bxs-landscape'></i>
+               </div>
+               <h4 class="title-sm mt-4">Graphic Designing</h4>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem incidunt sunt molestiae!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 p-4">
+               <div class="icon-box">
+                  <i class='bx bxs-coffee'></i>
+               </div>
+               <h4 class="title-sm mt-4">Codding</h4>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem incidunt sunt molestiae!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 p-4">
+               <div class="icon-box">
+                  <i class='bx bxs-image'></i>
+               </div>
+               <h4 class="title-sm mt-4">Photography</h4>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem incidunt sunt molestiae!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 p-4">
+               <div class="icon-box">
+                  <i class='bx bxs-check-shield'></i>
+               </div>
+               <h4 class="title-sm mt-4">Hacking</h4>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem incidunt sunt molestiae!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 p-4">
+               <div class="icon-box">
+                  <i class='bx bx-laptop'></i>
+               </div>
+               <h4 class="title-sm mt-4">Web Designing</h4>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem incidunt sunt molestiae!</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 p-4">
+               <div class="icon-box">
+                  <i class='bx bxs-happy-heart-eyes'></i>
+               </div>
+               <h4 class="title-sm mt-4">UI Design</h4>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem incidunt sunt molestiae!</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="team" class="row g-0 py-0 text-center">
+      <div class="col-lg-3 col-sm-6 team-member">
+         <div class="team-member-img">
+            <img src="{{ url_for('static',filename='img/dawa.jpg')}}" alt="">
+            <div class="social-icons">
+               <a href="#"><i class="bx bxl-facebook"></i></a>
+               <a href="#"><i class="bx bxl-gitlab"></i></a>
+            </div>
+         </div>
+         <div class="p-4">
+            <h5 class="title-sm mt-3 mb-0 text-white">12190046</h5>
+            <small class="text-white">Dawa Tshering</small>
+            <div class="hline"></div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 team-member even">
+         <div class="team-member-img">
+            <img src="{{ url_for('static',filename='img/team-4-800x800.jpg')}}" alt="">
+            <div class="social-icons">
+               <a href="#"><i class="bx bxl-facebook"></i></a>
+               <a href="#"><i class="bx bxl-gitlab"></i></a>
+            </div>
+         </div>
+         <div class="p-4">
+            <h5 class="title-sm mt-3 mb-0 text-white">12190077</h5>
+            <small class="text-white">Sonam Choden</small>
+            <div class="hline"></div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 team-member">
+         <div class="team-member-img">
+            <img src="{{ url_for('static',filename='img/sonam.jpeg')}}" alt="">
+
+            <div class="social-icons">
+               <a href="#"><i class="bx bxl-facebook"></i></a>
+               <a href="#"><i class="bx bxl-gitlab"></i></a>
+            </div>
+         </div>
+         <div class="p-4">
+            <h5 class="title-sm mt-3 mb-0 text-white">12190080</h5>
+            <small class="text-white">Sonam Choki</small>
+            <div class="hline"></div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 team-member even">
+         <div class="team-member-img">
+            <img src="{{ url_for('static',filename='img/thinley.jpeg')}}" alt="">
+
+            <div class="social-icons">
+               <a href="#"><i class="bx bxl-facebook"></i></a>
+               <a href="#"><i class="bx bxl-gitlab"></i></a>
+            </div>
+         </div>
+         <div class="p-4">
+            <h5 class="title-sm mt-3 mb-0 text-white">12190090 </h5>
+            <small class="text-white">Thinley Zangmo</small>
+            <div class="hline"></div>
+         </div>
+      </div>
+   </section> 
+   <footer>
+      <div class="footer-top">
+         <div class="container">
+            <div class="row gy-5">
+             <div class="col-md-4">
+
+              <h4 class="logo-text"> WEATHER FORECAST</h4>
+                            <a href="https://www.gcit.edu.bt"><i class="bx bx-location-plus">Gyalpozhing College of Information Technology</i></a>
+
+               </div>
+               <div class="col-md-2">
+                  <h5 class="title-sm">Navigation</h5>
+                  <div class="footer-links">
+                     <a href="#">Services</a>
+                     <a href="#">Our Work</a>
+                     <a href="#">Team</a>
+                     <a href="#">Blog</a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <h5 class="title-sm">More</h5>
+                  <div class="footer-links">
+                     <a href="#">FAQ's</a>
+                     <a href="#">Privacy & Policy</a>
+                     <a href="#">Liscences</a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <h5 class="title-sm">Contact</h5>
+                  <div class="footer-links">
+                     <p class="mb">1649 Norman Street, Los Angeles, 9001</p>
+                     <p class="mb-">8(800)316-06-42</p>
+                     <p class="mb">hello@yourdomain.com</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer-bottom">
+         <div class="container">
+            <div class="row justify-content-between gy-3">
+               <div class="col-md-6">
+                  <p class="mb-0">© PRJ303 2022 GROUP 11. All rights reserved</p>
+               </div>
+               <div class="col-auto">
+                  <p class="mb-0">Created by GROUP 11</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>
